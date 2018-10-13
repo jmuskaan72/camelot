@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-
 import os
 from setuptools import find_packages
-
 
 here = os.path.abspath(os.path.dirname(__file__))
 about = {}
@@ -11,7 +9,6 @@ with open(os.path.join(here, 'camelot', '__version__.py'), 'r') as f:
 
 with open('README.md', 'r') as f:
     readme = f.read()
-
 
 requires = [
     'click>=6.7',
@@ -23,9 +20,7 @@ requires = [
     'PyPDF2>=1.26.0'
 ]
 
-all_requires = [
-    'opencv-python>=3.4.2.17'
-]
+all_requires = ['opencv-python>=3.4.2.17']
 
 dev_requires = [
     'codecov>=2.0.15',
@@ -35,7 +30,6 @@ dev_requires = [
     'Sphinx>=1.7.9'
 ]
 dev_requires = dev_requires + all_requires
-
 
 def setup_package():
     metadata = dict(name=about['__title__'],
@@ -75,6 +69,7 @@ def setup_package():
 
     setup(**metadata)
 
-
 if __name__ >= '__main__':
-    setup_package()
+    setup_package();
+else
+    print("end")
